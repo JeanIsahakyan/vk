@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="//vk.com/css/al/dev.css">
+  <link rel="stylesheet" type="text/css" href="//vk.com/css/al/tooltips.css">
+
+  <script type="text/javascript"> var vk = {host: location.host.toString() }, StaticFiles = {}, locDomain = vk.host;</script>
+
+  <script type="text/javascript" src="//vk.com/js/al/common.js"></script>
+  <script type="text/javascript" src="//vk.com/js/al/dev.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</head>
+<body onresize="app.resizeWrap();">
+<div class="wrap">
+
+<!--copied from /dev -->
+<div id="dev_widget_colors" class="clear">
+  <div id="dev_colorpicker" class="ttb dev_tt_to_left" style="display: none;">
+    <div class="toup1">
+      <div class="ttb_cont"><div class="tt_text">
+        <div class="dev_colorpicker">
+          <div class="dev_colorpicker_title">Выберите цвет</div>
+          <div id="dev_colors" onmousedown="return Dev.colorsDown(event, true);" style="background: #AAAAFF;"><img class="dev_colors_grad" src="//vk.com/images/colorpicker_bg.png" width="176" height="176" /></div>
+          <canvas id="dev_palette" onmousedown="return Dev.paletteDown(event, true);" width="20" height="176"></canvas>
+          <div id="dev_picker1"></div>
+          <div id="dev_picker2"></div>
+        </div>
+      </div></div>
+    </div>
+  </div>
+ </div>
+<!---->
+
+  <div class="header_controls clear" id="header_controls">
+    <ul >
+      <li onmouseover="if(!hasClass(this,'disabled')) Dev.showColorBox(this, 1, event);" id="color">
+        Цвет 
+        <input type="hidden"  id="widget_color1" value="FFFFFF" />
+
+        <span class="dev_colorbox_cont"><span class="dev_colorbox" id="dev_colorbox1" style="background: white;">&nbsp;</span></span>
+
+      </li>
+      <li onmouseover="if(!hasClass(this,'disabled')) Dev.showColorBox(this, 2, event);" id="background">
+        Фон
+        <input type="hidden"  id="widget_color2" value="FFFFFF" />
+        <span  class="dev_colorbox_cont"><span class="dev_colorbox" id="dev_colorbox2" style="background: white;">&nbsp;</span></span>
+      </li>
+    </ul>
+  </div>
+  <div class="blocks_wrap" id="blocks_wrap">
+
+     <div class="blocks_header clear" id="blocks_header"></div>
+
+    <div id="blocks_number" class="blocks_number"></div>
+
+    <div class="blocks_parent">
+      <div class="block_selector" id="block_selector"></div>
+      <div id="blocks" class="blocks clear">
+
+     </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  onDomReady(function(){
+    cur.soonUpdatePreview = function() {
+       var color = ge('widget_color1').value, background = ge('widget_color2').value;
+       app.changeColor(color, background);
+       color = 'fff';
+       background = 'red';
+    }
+
+    app.init();
+  });
+</script>
+</body>
+</html>

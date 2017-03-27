@@ -1,0 +1,134 @@
+*{outline: none;}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: tahoma;
+  font-size: 13px;
+  overflow: hidden;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+.header_controls {
+  background-color: #efefef;
+  display: block;
+}
+.header_controls ul {
+  margin: 0;
+  list-style: none;
+}
+.clear:after {
+  clear: both;
+  display: block;
+  content: '';
+}
+.header_controls ul li {
+  padding: 10px;
+  float: left;
+  cursor: pointer;
+}
+.header_controls ul li.disabled, .header_controls ul li.disabled:hover {
+  color: #a19f9f;
+  cursor: default;
+  background: #e6e6e6;
+  opacity: 0.7;
+}
+#dev_colorpicker {
+  margin: 0 !important;
+  top: 50px;
+  left: 23px;
+}
+.dev_colorbox_cont, .dev_colorbox {
+  margin: -5px -5px -5px 0px;
+}
+.header_controls ul li:hover {
+  background-color: rgba(0,0,0,0.1);
+}
+.blocks {
+  border: 1px solid #ccc;
+} 
+.blocks_header { 
+  margin-left: 30px;
+  height: 25px;
+}
+.block_num {
+  width: 30px;
+  font-size: 13px;
+  height: 20px;
+  border: 1px  solid #ccc;
+  text-align: center;
+}
+.block_num.active_block{
+  box-shadow: inset -3px 0 0 0 #51cb93;
+}
+.blocks_header_item {
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  width: 100px;
+  height: 20px;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  line-height: 22px;
+  padding-bottom: 5px;
+}
+.blocks_header_item.active_block {
+  box-shadow: inset 0 -2px 0 0 #51cb93;
+}
+
+.blocks .block {
+  display: block;
+  width: 100px;
+  height: 20px;
+  border: 1px solid  #eaeaea;
+  overflow: hidden;
+}
+.block.selected {
+  border-color: #6ae4ac;
+}
+.block_section {
+  display: block;
+  width: 102px;
+  float: left;
+}
+.blocks_parent {
+  position: relative;
+  margin-left: 30px;
+}
+.blocks_number {
+    float: left;
+    width: 30px;
+}
+.blocks_wrap {
+  overflow: scroll;
+}
+.active_block {
+  color: green;
+  background: rgba(0, 0, 0, 0.1);
+  transition: 200ms all ease-in-out;
+}
+.block_selector {
+  transform: translateY(0px) translateX(0px);
+  min-width: 100px;
+  height: 20px;
+  border: 2px solid #51cb93;
+  position: absolute;
+  border-radius: 3px;
+  transition: 200ms all ease-in-out;
+}
+.block_selector::after {
+  display: block;
+  content: '';
+  background: #51cb93;
+  width: 5px;
+  height: 6px;
+  right: -3px;
+  position: absolute;
+  bottom: -3px;
+  border-radius: 5px;
+}
+.block_selector.active {
+  background-color: #fff;
+}
