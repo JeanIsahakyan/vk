@@ -316,17 +316,14 @@ var app = {
             if(start[2] < _cur[2] && sel[2] < _cur[2]) {
               for (var i1 = start[2]; i1 <= _cur[2]; i1++) {
                 addClass('block_' + i + '_'+ i1, 'selected');
-
-                addClass(ge('block_num_'+i1), 'active_block');
-
+                addClass('block_num_'+i1, 'active_block');
               }
             }
 
             if(start[2] > _cur[2] && sel[2] > _cur[2]) {
                for (var i1 = start[2]; i1 >= _cur[2]; i1--) {
                   addClass('block_' + i + '_'+ i1, 'selected');
-
-                  addClass(ge('block_num_'+i1), 'active_block');
+                  addClass('block_num_'+i1, 'active_block');
                 }
              }
 
@@ -334,9 +331,7 @@ var app = {
                for (var i1 = sel[2]; i1 > _cur[2]; i1--) {
                   if(i1 != start[2]){
                     removeClass('block_' + i + '_'+ i1, 'selected');
-
-              
-                   removeClass(ge('block_num_'+i1), 'active_block');
+                    removeClass('block_num_'+i1, 'active_block');
                   }
                 }
              }
@@ -345,8 +340,7 @@ var app = {
                for (var i1 = sel[2]; i1 < _cur[2]; i1++) {
                  if(i1 != start[2]){
                    removeClass('block_' + i + '_'+ i1, 'selected');
-
-                   removeClass(ge('block_num_'+i1), 'active_block');
+                   removeClass('block_num_'+i1, 'active_block');
                  }
                 }
              }
@@ -358,21 +352,21 @@ var app = {
             if(start[1] < _cur[1] && sel[1] < _cur[1]) {
               for (var i1 = start[1]; i1 <= _cur[1]; i1++) {
                 addClass('block_' + i1 + '_'+ i, 'selected');
-                addClass(ge('blocks_header_item_'+i1), 'active_block');
+                addClass('blocks_header_item_'+i1, 'active_block');
               }
             }
 
             if(start[1] > _cur[1] && sel[1] > _cur[1]) {
                for (var i1 = start[1]; i1 >= _cur[1]; i1--) {
                   addClass('block_' +  i1 + '_'+ i, 'selected');
-                  addClass(ge('blocks_header_item_'+i1), 'active_block');
+                  addClass('blocks_header_item_'+i1, 'active_block');
                 }
              }
 
              if(sel[1] > _cur[1] && start[1] < sel[1]) {
                for (var i1 = sel[1]; i1 > _cur[1]; i1--) {
                   if(i1 != start[1] ){
-                    removeClass(ge('blocks_header_item_'+i1), 'active_block');
+                    removeClass('blocks_header_item_'+i1, 'active_block');
                     removeClass('block_' + i1 + '_'+ i, 'selected');
                   }
                 }
@@ -381,7 +375,7 @@ var app = {
              if(sel[1] < _cur[1] && start[1] > sel[1]) {
                for (var i1 = sel[1]; i1 < _cur[1]; i1++) {
                  if(i1 != start[1]){
-                   removeClass(ge('blocks_header_item_'+i1), 'active_block');
+                   removeClass('blocks_header_item_'+i1, 'active_block');
                    removeClass('block_' + i1 + '_'+ i, 'selected');
                  }
                 }
@@ -398,21 +392,21 @@ var app = {
            if(start[2] >= _cur[2] && sel[2] >= _cur[2]) {
              for (var i1 = start[2]; i1 > _cur[2]; i1--) {
                 addClass('block_' + i + '_'+ i1, 'selected');
-                addClass(ge('block_num_'+i1), 'active_block');
+                addClass('block_num_'+i1, 'active_block');
               }
             }
 
             if(start[2] <= _cur[2] && sel[2] <= _cur[2]){
               for (var i1 = start[2]; i1 <= _cur[2]; i1++) {
                 addClass('block_' + i + '_'+ i1, 'selected');
-                addClass(ge('block_num_'+i1), 'active_block');
+                addClass('block_num_'+i1, 'active_block');
               }
             }
 
             if(sel[2] >= _cur[2] && start[2] <= sel[2]) {
              for (var i1 = sel[2]; i1 > _cur[2]; i1--) {
                 if(i1 != start[2]){
-                  removeClass(ge('block_num_'+i1), 'active_block');
+                  removeClass('block_num_'+i1, 'active_block');
                   removeClass('block_' + i + '_'+ i1, 'selected');
                 }
               }
@@ -421,7 +415,7 @@ var app = {
            if(sel[2] <= _cur[2] && start[2] >= sel[2]) {
              for (var i1 = sel[2]; i1 < _cur[2]; i1++) {
                 if(i1 != start[2]){
-                   removeClass(ge('block_num_'+i1), 'active_block');
+                   removeClass('block_num_'+i1, 'active_block');
                    removeClass('block_' + i + '_'+ i1, 'selected');
                  }
               }
@@ -434,7 +428,7 @@ var app = {
            if(start[1] >= _cur[1] && sel[1] >= _cur[1]) {
              for (var i1 = start[1]; i1 >= _cur[1]; i1--) {
                 addClass('block_' +i1 + '_'+ i , 'selected');
-                addClass(ge('blocks_header_item_'+i1), 'active_block');
+                addClass('blocks_header_item_'+i1, 'active_block');
 
               }
             }
@@ -442,14 +436,14 @@ var app = {
             if(start[1] <= _cur[1] && sel[1] <= _cur[1]){
               for (var i1 = start[1]; i1 <= _cur[1]; i1++) {
                 addClass('block_' + i1 + '_'+ i, 'selected');
-                addClass(ge('blocks_header_item_'+i1), 'active_block');
+                addClass('blocks_header_item_'+i1, 'active_block');
               }
             }
 
             if(sel[1] >= _cur[1] && start[1] <= sel[1]) {
              for (var i1 = sel[1]; i1 > _cur[1]; i1--) {
                 if(i1 != start[1]){
-                   removeClass(ge('blocks_header_item_'+i1), 'active_block');
+                   removeClass('blocks_header_item_'+i1, 'active_block');
                    removeClass('block_' + i1 + '_'+ i, 'selected');
                  }
               }
@@ -459,7 +453,7 @@ var app = {
              for (var i1 = sel[1]; i1 < _cur[1]; i1++) {
                 if(i1 != start[1]){
                    removeClass('block_' + i1 + '_'+ i, 'selected');
-                   removeClass(ge('blocks_header_item_'+i1), 'active_block');
+                   removeClass('blocks_header_item_'+i1, 'active_block');
                  }
               }
            }
@@ -546,8 +540,8 @@ var app = {
       removeClass(v, 'active_block');
     });
 
-    addClass(ge('blocks_header_item_'+id[1]), 'active_block');
-    addClass(ge('block_num_'+id[2]), 'active_block');
+    addClass('blocks_header_item_'+id[1], 'active_block');
+    addClass('block_num_'+id[2], 'active_block');
 
     _a.updatePickerColors();
     _a.clearSelected();
